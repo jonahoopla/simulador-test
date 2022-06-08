@@ -1,13 +1,12 @@
-
 const headerTemplateMov = document.createElement('template');
 headerTemplateMov.innerHTML = `
-		<link href="assets/css/style.min.css" rel="stylesheet">
+		<link href="https://simuladores.pages.dev/assets/css/style.min.css" rel="stylesheet">
 		<div id="idContenedorSimulador" class="movimientos">
 			<div class="fondoCajero">
 				<div class="contLateral">
 					<div class="cuadroTexto">
-						<img src="assets/img/BER/Cajero/Caja-Texto-ER.png" alt="">
-						<img class="mobile" src="assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
+						<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Caja-Texto-ER.png" alt="">
+						<img class="mobile" src="https://simuladores.pages.dev/assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
 						<div class="contTexto pasoUno activo">
 							<p>Ingresá la tarjeta de débito en el cajero y escribí <strong>(con el teclado)</strong> tu clave. <strong>Para este ejemplo 1987</strong> y luego presioná <strong>“Continuar”.</strong></p>
 						</div>
@@ -37,7 +36,7 @@ headerTemplateMov.innerHTML = `
 						</div>
 					</div>
 					<div class="cuadroMano num1">
-						<img src="assets/img/BER/Cajero/Mano-02.png" alt="">
+						<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Mano-02.png" alt="">
 					</div>
 				</div>
 				<div class="contCuadroPantalla pasoUno">
@@ -52,7 +51,7 @@ headerTemplateMov.innerHTML = `
 						<a class="btnClick"></a>
 						<div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -91,7 +90,7 @@ headerTemplateMov.innerHTML = `
                         <a class="btnClick"></a>
                         <div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -121,7 +120,7 @@ headerTemplateMov.innerHTML = `
                         <a class="btnClick"></a>
                         <div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -141,7 +140,7 @@ headerTemplateMov.innerHTML = `
                         <a class="btnClick"></a>
                         <div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -165,7 +164,7 @@ headerTemplateMov.innerHTML = `
                         <a class="btnClick"></a>
                         <div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -199,7 +198,7 @@ headerTemplateMov.innerHTML = `
                         <a class="btnClick"></a>
                         <div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -219,7 +218,7 @@ headerTemplateMov.innerHTML = `
                                 <a class="btnClick"></a>
                                 <div class="cuadroFlecha">
 									<div class="imgCont">
-										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+										<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -241,7 +240,7 @@ headerTemplateMov.innerHTML = `
 								<a class="btnClick"></a>
 								<div class="cuadroFlecha">
 									<div class="imgCont">
-										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+										<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -263,23 +262,23 @@ headerTemplateMov.innerHTML = `
 						</div>
 					</div>
 				</div>
-				<img class="imgPantallaCajero" src="assets/img/BER/Cajero/Pantalla-00.png" alt="">
+				<img class="imgPantallaCajero" src="https://simuladores.pages.dev/assets/img/BER/Cajero/Pantalla-00.png" alt="">
 			</div>
 		</div>
 `;
 
 const headerTemplateHB = document.createElement('template');
 headerTemplateHB.innerHTML = `
-		<link href="assets/css/style.min.css" rel="stylesheet">
+		<link href="https://simuladores.pages.dev/assets/css/style.min.css" rel="stylesheet">
 		<div id="idContenedorSimulador" class="escritorio">
 			<div class="fondoCompu">
                 <div class="contLateral">
                     <div class="contMano mano-1">
-                        <img src="assets/img/BER/Homebanking/Mano-01.png" alt="">
+                        <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/Mano-01.png" alt="">
                     </div>
                     <div class="contCuadro">
-                        <img src="assets/img/BER/Homebanking/Caja-Texto-ER.png" alt="">
-                        <img class="mobile" src="assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
+                        <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/Caja-Texto-ER.png" alt="">
+                        <img class="mobile" src="https://simuladores.pages.dev/assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
                         <div class="contTexto pasoUno activo">
 							<p>Hola! Soy La Mano y te voy a ayudar a registrarte para gestionar el <strong>Home Banking.</strong></p>
 							<p>El primer paso es dar click en el <strong>botón superior derecho</strong> para comenzar tu registro.</p>
@@ -315,7 +314,7 @@ headerTemplateHB.innerHTML = `
                 </div>
                 <div class="contPasos">
                     <div id="contIzqImgs" class="contIzquierda img-1">
-                        <img src="assets/img/BER/Homebanking/ER-03.jpg" alt="">
+                        <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/ER-03.jpg" alt="">
                         <div class="contCuadro cuadro-2">
                             <div class="contenido">
                                 <div class="fila">
@@ -329,7 +328,7 @@ headerTemplateHB.innerHTML = `
                                     <div class="contCheck">
                                         <label for="inputCaptcha"><input id="inputCaptcha" type="checkbox"><span>No soy un robot</span></label>
                                     </div>
-                                    <img src="assets/img/captcha.jpg" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/captcha.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -373,7 +372,7 @@ headerTemplateHB.innerHTML = `
                                             <input type="file" id="inputImagen">
                                         </div>
                                         <div class="Img">
-                                            <img src="assets/img/BER/Homebanking/imgfondo.jpg" alt="">
+                                            <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/imgfondo.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -390,76 +389,76 @@ headerTemplateHB.innerHTML = `
                         <a id="btnPasoDos">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoTres">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoCuatro">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoCinco">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoSeis">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoSiete">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoOcho">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                         <a id="btnPasoNueve">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="contImgFija">
-                        <img src="assets/img/BER/Homebanking/ER-02.jpg" alt="">
+                        <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/ER-02.jpg" alt="">
                     </div>
                     <div class="contImgPrincipal">
-                        <img src="assets/img/BER/Homebanking/ER-01.jpg" alt="">
+                        <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/ER-01.jpg" alt="">
                         <a id="btnPasoUno">
                             <div class="cuadroFlecha">
                                 <div class="imgCont">
-                                    <img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+                                    <img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <img class="imgFondoCompu" src="assets/img/BER/Homebanking/Notebook.png" alt="">
-                <img class="imgFondoCompu mobile" src="assets/img/BER/Mobile/Telefono.png" alt="">
+                <img class="imgFondoCompu" src="https://simuladores.pages.dev/assets/img/BER/Homebanking/Notebook.png" alt="">
+                <img class="imgFondoCompu mobile" src="https://simuladores.pages.dev/assets/img/BER/Mobile/Telefono.png" alt="">
                 <div id="contMesajeError">
                     <div class="mensajeError">
                         <p>Por favor complete los campos indicados.</p>
@@ -472,14 +471,13 @@ headerTemplateHB.innerHTML = `
 
 const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
-
-		<link href="assets/css/style.min.css" rel="stylesheet">
+		<link href="https://simuladores.pages.dev/assets/css/style.min.css" rel="stylesheet">
 		<div id="idContenedorSimulador" class="ingreso">
 			<div class="fondoCajero">
 				<div class="contLateral">
 					<div class="cuadroTexto">
-						<img src="assets/img/BER/Cajero/Caja-Texto-ER.png" alt="">
-						<img class="mobile" src="assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
+						<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Caja-Texto-ER.png" alt="">
+						<img class="mobile" src="https://simuladores.pages.dev/assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
 						<div class="contTexto pasoUno activo">
 							<p>Para empezar deberás ingresar la tarjeta de débito en el cajero y escribir <strong>(con el teclado)</strong> la clave PIN que entrega el banco o los últimos 4 dígitos del DNI.</p>
 							<p><strong>Para este ejemplo: 1373.</strong> Luego presioná <strong>“Continuar”.</strong></p>
@@ -499,7 +497,7 @@ headerTemplate.innerHTML = `
 						</div>
 					</div>
 					<div class="cuadroMano num1">
-						<img src="assets/img/BER/Cajero/Mano-02.png" alt="">
+						<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Mano-02.png" alt="">
 					</div>
 				</div>
 				<div class="contCuadroPantalla pasoUno">
@@ -514,7 +512,7 @@ headerTemplate.innerHTML = `
 						<a class="btnClick"></a>
 						<div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -536,7 +534,7 @@ headerTemplate.innerHTML = `
 						<a class="btnClick"></a>
 						<div class="cuadroFlecha">
 							<div class="imgCont">
-								<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+								<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -559,7 +557,7 @@ headerTemplate.innerHTML = `
 								<a class="btnClick"></a>
 								<div class="cuadroFlecha">
 									<div class="imgCont">
-										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+										<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -581,7 +579,7 @@ headerTemplate.innerHTML = `
 						</div>
 					</div>
 				</div>
-				<img class="imgPantallaCajero" src="assets/img/BER/Cajero/Pantalla-00.png" alt="">
+				<img class="imgPantallaCajero" src="https://simuladores.pages.dev/assets/img/BER/Cajero/Pantalla-00.png" alt="">
 			</div>
 		</div>
 `;
