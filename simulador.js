@@ -1450,6 +1450,16 @@ class simuladorBancosProd extends HTMLElement{
 
 	        contimagensel.className = '';
 	        contimagensel.classList.add('Img');
+
+	        puntero.shadowRoot.getElementById('selectDNI').selectedIndex = 0;
+	        puntero.shadowRoot.getElementById('inputDNI').value = '';
+	        puntero.shadowRoot.getElementById("inputCaptcha").checked = false;
+	        puntero.shadowRoot.getElementById('inputCodigoVerificacion').value = '';
+	        puntero.shadowRoot.getElementById('inputCodigoVerificacion2').value = '';
+	        puntero.shadowRoot.getElementById('inputUsuario').value = '';
+	        puntero.shadowRoot.getElementById('inputContrasena').value = '';
+	        puntero.shadowRoot.getElementById('inputRepetirContrasena').value = '';
+	        puntero.shadowRoot.getElementById("inputlegales").checked = false;
 	    };
 	}
 
