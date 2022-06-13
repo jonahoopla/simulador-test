@@ -1445,6 +1445,11 @@ class simuladorBancosProd extends HTMLElement{
 
 	        puntero.shadowRoot.querySelector('.fondoCompu .contLateral .contMano').classList.remove('mano-1');
 	        puntero.shadowRoot.querySelector('.fondoCompu .contLateral .contMano').classList.add('mano-2');
+
+	        var contimagensel = puntero.shadowRoot.getElementById('contimagensel');
+
+	        contimagensel.className = '';
+	        contimagensel.classList.add('Img');
 	    };
 	}
 
