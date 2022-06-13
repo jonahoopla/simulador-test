@@ -365,14 +365,73 @@ headerTemplateHB.innerHTML = `
                                     <label for="inputRepetirContrasena"><span>Repetir Contraseña</span><input type="password" name="" id="inputRepetirContrasena"></label>
                                 </div>
                                 <div class="filaimagen">
-                                    <div class="contImagen">
+                                    <a class="contImagen" id="abtnOpenSelImage">
                                         <div class="contTexto">
-                                            <label class="titulo" for="inputImagen">IMAGEN DE SEGURIDAD</label>
-                                            <label for="inputImagen">Selecciona imagen</label>
-                                            <input type="file" id="inputImagen">
+                                            <p class="titulo">IMAGEN DE SEGURIDAD</p>
+                                            <p>Selecciona imagen</p>
                                         </div>
-                                        <div class="Img">
+                                        <div id="contimagensel" class="Img">
                                             <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/imgfondo.jpg" alt="">
+                                            <div class="itemimagen" id="imgimagen-1">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-01.jpg" alt=""></div>
+                                            </div>
+                                            <div class="itemimagen" id="imgimagen-2">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-02.jpg" alt=""></div>
+                                            </div>
+                                            <div class="itemimagen" id="imgimagen-3">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-03.jpg" alt=""></div>
+                                            </div>
+                                            <div class="itemimagen" id="imgimagen-4">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-04.jpg" alt=""></div>
+                                            </div>
+                                            <div class="itemimagen" id="imgimagen-5">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-05.jpg" alt=""></div>
+                                            </div>
+                                            <div class="itemimagen" id="imgimagen-6">
+                                                <img src="https://simuladores.pages.dev/assets/img/Lapizeditar.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-06.jpg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div id="contCuadroSelImagen" class="contCuadroSelImagen">
+                                        <div class="conttitulo">
+                                            <div class="tit">
+                                                <p>Seleccionar Imagen</p>
+                                            </div>
+                                            <div class="close">
+                                                <a id="abtnCerrarCuadro">x</a>
+                                            </div>
+                                        </div>
+                                        <div class="contImagenes">
+                                            <a class="item" id="abtnimagen-1">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-01.jpg" alt=""></div>
+                                            </a>
+                                            <a class="item" id="abtnimagen-2">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-02.jpg" alt=""></div>
+                                            </a>
+                                            <a class="item" id="abtnimagen-3">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-03.jpg" alt=""></div>
+                                            </a>
+                                            <a class="item" id="abtnimagen-4">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-04.jpg" alt=""></div>
+                                            </a>
+                                            <a class="item" id="abtnimagen-5">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-05.jpg" alt=""></div>
+                                            </a>
+                                            <a class="item" id="abtnimagen-6">
+                                                <img src="https://simuladores.pages.dev/assets/img/check.svg" alt="">
+                                                <div class="img"><img src="https://simuladores.pages.dev/assets/img/img-seguridad-06.jpg" alt=""></div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1181,10 +1240,52 @@ class simuladorBancosProd extends HTMLElement{
 	}
 
 	initPasoUno(){
-	    var abtn = this.shadowRoot.getElementById('btnPasoUno');
-	    var abtncerrar = this.shadowRoot.getElementById('btnCerrar');
 
 	    var puntero = this;
+
+	    var abtnOpenSelImg = this.shadowRoot.getElementById('abtnOpenSelImage');
+	    abtnOpenSelImg.onclick = function() {
+	        
+	        var div = puntero.shadowRoot.getElementById('contCuadroSelImagen');
+	        div.classList.add('activo');
+	        setTimeout(function(){
+	            div.classList.add('visible');
+	        }, 250);
+
+	    };
+
+	    var abtnCerrarCuadro = this.shadowRoot.getElementById('abtnCerrarCuadro');
+	    abtnCerrarCuadro.onclick = function() {
+	        
+	        var div = puntero.shadowRoot.getElementById('contCuadroSelImagen');
+	        div.classList.remove('visible');
+	        setTimeout(function(){
+	            div.classList.remove('activo');
+	        }, 500);
+
+	    };
+
+	    this.shadowRoot.getElementById('abtnimagen-1').onclick = function() {
+	        puntero.selImagenPerfil('img-1');
+	    };
+	    this.shadowRoot.getElementById('abtnimagen-2').onclick = function() {
+	        puntero.selImagenPerfil('img-2');
+	    };
+	    this.shadowRoot.getElementById('abtnimagen-3').onclick = function() {
+	        puntero.selImagenPerfil('img-3');
+	    };
+	    this.shadowRoot.getElementById('abtnimagen-4').onclick = function() {
+	        puntero.selImagenPerfil('img-4');
+	    };
+	    this.shadowRoot.getElementById('abtnimagen-5').onclick = function() {
+	        puntero.selImagenPerfil('img-5');
+	    };
+	    this.shadowRoot.getElementById('abtnimagen-6').onclick = function() {
+	        puntero.selImagenPerfil('img-6');
+	    };
+
+	    var abtn = this.shadowRoot.getElementById('btnPasoUno');
+	    var abtncerrar = this.shadowRoot.getElementById('btnCerrar');
 
 	    abtncerrar.onclick = function() {
         
@@ -1345,6 +1446,15 @@ class simuladorBancosProd extends HTMLElement{
 	        puntero.shadowRoot.querySelector('.fondoCompu .contLateral .contMano').classList.remove('mano-1');
 	        puntero.shadowRoot.querySelector('.fondoCompu .contLateral .contMano').classList.add('mano-2');
 	    };
+	}
+
+	selImagenPerfil(sel){
+	    var contimagensel = this.shadowRoot.getElementById('contimagensel');
+
+	    contimagensel.className = '';
+	    contimagensel.classList.add('Img', 'showimagen', sel);
+
+	    this.shadowRoot.getElementById('abtnCerrarCuadro').click();
 	}
 
 	mostrarError(){
