@@ -1,6 +1,6 @@
 {
   "name": "hoopla-simulador-test",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "prueba de simulador basico",
   "main": "simulador.js",
   "scripts": {
