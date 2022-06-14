@@ -703,7 +703,7 @@ class simuladorBancosProd extends HTMLElement{
         if( this.isMobile() ){
 	        var inputs, index;
 
-	        inputs = this.shadowRoot.querySelector('input');
+	        inputs = this.shadowRoot.querySelectorAll('input');
 	        for (index = 0; index < inputs.length; ++index) {
 	            inputs[index].removeAttribute('readonly');
 	        }
@@ -990,18 +990,20 @@ class simuladorBancosProd extends HTMLElement{
 	        this.btnClick.onclick = function() {
 	            puntero.textoPantalla.classList.add('animOcultar');
 
-	            punterocontTexto_activo.classList.remove('activo');
-	            punterocontTexto_proximo.classList.add('activo');
+	            puntero.contTexto_activo.classList.remove('activo');
+	            puntero.contTexto_proximo.classList.add('activo');
 
-	            punterotextoPantalla.classList.remove('activo');
+	            puntero.textoPantalla.classList.remove('activo');
 
-	            punteropasoCuatro();
+	            puntero.pasoCuatro();
 	        };
 	    }
 	}
 
 	pasoCuatro(){
 	    this.textoPantalla = this.shadowRoot.querySelector('.contCuadroPantalla.pasoCuatro');
+
+	    var puntero = this;
 
 	    if( this.shadowRoot.getElementById('idContenedorSimulador').classList.contains('movimientos') ){
 
@@ -1017,8 +1019,6 @@ class simuladorBancosProd extends HTMLElement{
 
 		    this.shadowRoot.querySelector('.cuadroMano').classList.remove('num1');
 		    this.shadowRoot.querySelector('.cuadroMano').classList.add('num2');
-
-		    var puntero = this;
 
 		    this.btnClick.onclick = function() {
 		        puntero.textoPantalla.classList.add('animOcultar');
@@ -1057,12 +1057,12 @@ class simuladorBancosProd extends HTMLElement{
 	    this.enter_primerPass = "";
 	    this.front_primerPass = "";
 
-	    var collection = this.shadowRoot.getElementsByClassName("contCuadroPantalla");
+	    var collection = this.shadowRoot.querySelectorAll(".contCuadroPantalla");
 	    for (var i = 0; i < collection.length; i++) {
 	        collection[i].classList.remove('activo', 'anim', 'animOcultar');
 	    }
 
-	    collection = this.shadowRoot.getElementsByClassName("pantallaTexto");
+	    collection = this.shadowRoot.querySelectorAll(".pantallaTexto");
 	    for (i = 0; i < collection.length; i++) {
 	        collection[i].classList.remove('siguiente');
 	    }
@@ -1158,7 +1158,7 @@ class simuladorBancosProd extends HTMLElement{
 
 	    var puntero = this;
 
-	    this.btnClick_dos.onclick = function() {
+	    btnClick_dos.onclick = function() {
 	        puntero.textoPantalla.classList.add('animOcultar');
 
 	        puntero.contTexto_activo.classList.remove('activo');
@@ -1226,12 +1226,12 @@ class simuladorBancosProd extends HTMLElement{
 	    this.enter_primerPass = "";
 	    this.front_primerPass = "";
 
-	    var collection = this.shadowRoot.getElementsByClassName("contCuadroPantalla");
+	    var collection = this.shadowRoot.querySelectorAll(".contCuadroPantalla");
 	    for (var i = 0; i < collection.length; i++) {
 	        collection[i].classList.remove('activo', 'anim', 'animOcultar');
 	    }
 
-	    collection = this.shadowRoot.getElementsByClassName("pantallaTexto");
+	    collection = this.shadowRoot.querySelectorAll(".pantallaTexto");
 	    for (i = 0; i < collection.length; i++) {
 	        collection[i].classList.remove('siguiente');
 	    }
