@@ -692,16 +692,18 @@ class simuladorBancosProd extends HTMLElement{
 		this.tercerPass = this.shadowRoot.getElementById("tercerPass");
 		this.cuartoPass = this.shadowRoot.getElementById("cuartoPass");
 
-		var hasVScroll = document.body.scrollHeight > document.body.clientHeight;
+		if( !this.isMobile() ){
+			var hasVScroll = document.body.scrollHeight > document.body.clientHeight;
 
-	    if(hasVScroll){
-	        this.shadowRoot.getElementById('idContenedorSimulador').classList.add('scrollbars');
-	    }
+		    if(hasVScroll){
+		        this.shadowRoot.getElementById('idContenedorSimulador').classList.add('scrollbars');
+		    }
+		}
 
         if( this.isMobile() ){
 	        var inputs, index;
 
-	        inputs = this.shadowRoot.getElementsByTagName('input');
+	        inputs = this.shadowRoot.querySelector('input');
 	        for (index = 0; index < inputs.length; ++index) {
 	            inputs[index].removeAttribute('readonly');
 	        }
@@ -1001,7 +1003,7 @@ class simuladorBancosProd extends HTMLElement{
 	pasoCuatro(){
 	    this.textoPantalla = this.shadowRoot.querySelector('.contCuadroPantalla.pasoCuatro');
 
-	    if( document.getElementById('idContenedorSimulador').classList.contains('movimientos') ){
+	    if( this.shadowRoot.getElementById('idContenedorSimulador').classList.contains('movimientos') ){
 
 		    this.contTexto_activo = this.shadowRoot.querySelector('.contTexto.pasoCuatro');
 		    this.contTexto_proximo = this.shadowRoot.querySelector('.contTexto.pasoCinco');
