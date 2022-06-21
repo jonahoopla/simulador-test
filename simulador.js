@@ -258,6 +258,11 @@ headerTemplateMov.innerHTML = `
 							<div class="btn der">
 								<p>SI ---------></p>
 								<a class="btnClick"></a>
+								<div class="cuadroFlecha">
+									<div class="imgCont">
+										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -634,6 +639,11 @@ headerTemplate.innerHTML = `
 							<div class="btn der">
 								<p>SI ---------></p>
 								<a class="btnClick"></a>
+								<div class="cuadroFlecha">
+									<div class="imgCont">
+										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
