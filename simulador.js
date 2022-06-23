@@ -44,7 +44,7 @@ headerTemplateMov.innerHTML = `
 						<p style="--animation-order: 1;">BIENVENIDO A RED LINK<br />INGRESE SU CODIGO DE<br />ACCESO PERSONAL (PIN)<br />LUEGO PRESIONE CONTIUAR</p>
 					</div>
 					<div class="pantallaTexto Center" style="--animation-order: 3;">
-						<input type="text" id="primerPass" readonly>
+						<input type="text" id="primerPass"  maxlength="4">
 					</div>
 					<div class="pantallaTexto btn num-7" style="--animation-order: 4;">
 						<p>CONTINUAR -></p>
@@ -187,7 +187,7 @@ headerTemplateMov.innerHTML = `
                                 <li>5) 00020002765473</li>
                                 <li>6) VER MAS CUENTAS</li>
                             </ul>
-                            <p style="--animation-order: 3;">USTED SELECCIONO:<input type="text" id="segundoPass" readonly></p>
+                            <p style="--animation-order: 3;">USTED SELECCIONO:<input type="text" id="segundoPass"></p>
                         </div>
 					</div>
                     <div class="pantallaTexto btn num-7" style="--animation-order: 4;">
@@ -260,7 +260,7 @@ headerTemplateMov.innerHTML = `
 								<a class="btnClick"></a>
 								<div class="cuadroFlecha">
 									<div class="imgCont">
-										<img src="assets/img/BER/Cajero/Flecha-ER.png" alt="">
+										<img src="https://simuladores.pages.dev/assets/img/BER/Cajero/Flecha-ER.png" alt="">
 									</div>
 								</div>
 							</div>
@@ -569,7 +569,7 @@ headerTemplate.innerHTML = `
 						<p style="--animation-order: 1;">BIENVENIDO A RED LINK<br />INGRESE SU CODIGO DE<br />ACCESO PERSONAL (PIN)<br />LUEGO PRESIONE CONTIUAR</p>
 					</div>
 					<div class="pantallaTexto Center" style="--animation-order: 3;">
-						<input type="text" id="primerPass" readonly>
+						<input type="text" id="primerPass"  maxlength="4">
 					</div>
 					<div class="pantallaTexto btn num-7" style="--animation-order: 4;">
 						<p>CONTINUAR -></p>
@@ -589,9 +589,9 @@ headerTemplate.innerHTML = `
 						<p style="--animation-order: 1;">INGRESE UNA NUEVA CLAVE<br />DE CAJERO<br />DISTINTA DE SU CLAVE ACTUAL<br />LUEGO PRESIONE CONTIUAR</p>
 					</div>
 					<div class="pantallaTexto Center" style="--animation-order: 3;">
-						<p>INGRESE CLAVE ACTUAL:<input type="text" id="segundoPass" readonly></p>
-						<p>INGRESE NUEVA CLAVE:<input type="text" id="tercerPass" readonly></p>
-						<p>REINGRESE NUEVA CLAVE:<input type="text" id="cuartoPass" readonly></p>
+						<p>INGRESE CLAVE ACTUAL:<input type="text" id="segundoPass"  maxlength="4"></p>
+						<p>INGRESE NUEVA CLAVE:<input type="text" id="tercerPass"  maxlength="4"></p>
+						<p>REINGRESE NUEVA CLAVE:<input type="text" id="cuartoPass"  maxlength="4"></p>
 					</div>
 					<div class="pantallaTexto btn num-7" style="--animation-order: 4;">
 						<p>CONTINUAR -></p>
@@ -702,22 +702,22 @@ class simuladorBancosProd extends HTMLElement{
 		this.tercerPass = this.shadowRoot.getElementById("tercerPass");
 		this.cuartoPass = this.shadowRoot.getElementById("cuartoPass");
 
-		if( !this.isMobile() ){
+		/*if( !this.isMobile() ){
 			var hasVScroll = document.body.scrollHeight > document.body.clientHeight;
 
 		    if(hasVScroll){
 		        this.shadowRoot.getElementById('idContenedorSimulador').classList.add('scrollbars');
 		    }
-		}
+		}*/
 
-        if( this.isMobile() ){
+        /*if( this.isMobile() ){
 	        var inputs, index;
 
 	        inputs = this.shadowRoot.querySelectorAll('input');
 	        for (index = 0; index < inputs.length; ++index) {
 	            inputs[index].removeAttribute('readonly');
 	        }
-	    }
+	    }*/
 
 	    if( this.shadowRoot.getElementById('idContenedorSimulador').classList.contains('ingreso') ){
 	        this.handlerKeyUp();
@@ -755,7 +755,7 @@ class simuladorBancosProd extends HTMLElement{
 
 	handlerKeyUp(){
 		var puntero = this;
-	    document.onkeyup = function(event){
+	    this.shadowRoot.getElementById('idContenedorSimulador').onkeyup = function(event){
 	        //console.log(event.key);
 
 	        if( isNaN( parseInt(event.key)) ){
