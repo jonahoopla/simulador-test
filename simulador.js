@@ -285,32 +285,32 @@ headerTemplateHB.innerHTML = `
                         <img src="https://simuladores.pages.dev/assets/img/BER/Homebanking/Caja-Texto-ER.png" alt="">
                         <img class="mobile" src="https://simuladores.pages.dev/assets/img/BER/Mobile/Caja-Texto-ER-mobile.png" alt="">
                         <div class="contTexto pasoUno activo">
-							<p>Hola! Soy La Mano y te voy a ayudar a registrarte para gestionar el <strong>Home Banking.</strong></p>
-							<p>El primer paso es dar click en el <strong>botón superior derecho</strong> para comenzar tu registro.</p>
+							<p>El primer paso es dar click en el <strong>botón superior derecho</strong> para comenzar tu registro</p>
 						</div>
                         <div class="contTexto pasoDos">
-							<p>Comenzamos el proceso, seleccioná la opción <strong>“Crear mi usuario”.</strong></p>
+							<p><strong>Comenzamos.</strong></p>
+                            <p>Primero, seleccioná la opción <strong>“Crear nuevo usuario”</strong></p>
 						</div>
                         <div class="contTexto pasoTres">
 							<p>En esta pantalla elegí la opción que prefieras para completar los datos, <strong>tildá</strong> la casilla y presioná <strong>“Aceptar”</strong> para recibir el código de activación.</p>
-                            <p><strong>Para este ejemplo DNI 12975317</strong></p>
+                            <p><strong>Para este ejemplo completá: DNI 12975317</strong></p>
 						</div>
                         <div class="contTexto pasoCuatro">
-							<p>Código enviado! ahora revisá tu correo electrónico y una vez que lo encuentres, volvé a esta pantalla para activarlo y presioná <strong>“Continuar”.</strong></p>
+							<p>¡Código enviado! cuando estés haciendo realmente este paso vas a recibir un código en tu correo electrónico. Una vez que lo encuentres, volvé a esta pantalla para activarlo y presioná <strong>“Continuar”</strong>.</p>
 						</div>
                         <div class="contTexto pasoCinco">
-                            <p>Una vez que lo recibas ingresalo y presioná <strong>“Continuar”</strong>.</p>
-                            <p><strong>Vamos a usar 596445988</strong>.</p>
+                            <p>Para este ejemplo, vamos a usar el código de verificación <strong>596445988</strong>. Luego seleccioná <strong>“Continuar”</strong>.</p>
 						</div>
                         <div class="contTexto pasoSeis">
-							<p>Te enviaremos un segundo código para validar tu identidad al teléfono registrado. Una vez que lo recibas ingresalo y presioná <strong>“Continuar”</strong>.</p>
-                            <p><strong>Para este ejemplo 80245448</strong></p>
+							<p>Te enviaremos un <strong>segundo código</strong> para validar tu identidad al teléfono registrado.</p>
+                            <p>Para este ejemplo, usá <strong>80245448</strong> y presioná <strong>“Continuar”</strong>.</p>
 						</div>
                         <div class="contTexto pasoSiete">
-							<p>Ahora debes ingresar tus datos. En este caso completá: Usuario: <strong>Ignacio970</strong> / Contraseña: <strong>452.122</strong> / Seleccionar <strong>imagen</strong> remarcada / <strong>Tildar</strong> la casilla de Términos y condiciones / Presionar <strong>“Continuar”</strong>.</p>
+							<p>Ahora debés completar tus datos que te serán solicitados cada vez que ingreses a Home Banking.</p>
+                            <p>Para este caso completá: Usuario: <strong>Ignacio970</strong> / Contraseña: <strong>452.122</strong> / Seleccionar <strong>imagen</strong> / <strong>Tildar</strong> la casilla de Términos y condiciones / Presionar <strong>“Continuar”</strong>.</p>
 						</div>
                         <div class="contTexto pasoOcho">
-							<p>Listo! Ya podes presionar <strong>Ingresar a Homebanking</strong> para empezar a operar.</p>
+							<p>¡Listo! Ya generaste tu usuario y contraseña para poder operar en Home Banking de Banco XXXX desde donde estés. <strong>¡Anotala para no olvidarla!</strong></p>
 						</div>
                         <div class="contTexto pasoNueve">
 							<p>Puedes volver a ver los pasos.</p>
@@ -684,11 +684,19 @@ class simuladorBancosProd extends HTMLElement{
         var banco = this.getAttribute("data-banco");
         var template = this.getAttribute("data-template");
 
+        var nombrebanco = "Entre Ríos";
+        if(banco == 'BSF') nombrebanco = "Santa Fe";
+        else if(banco == 'BSC') nombrebanco = "Santa Cruz";
+        else if(banco == 'BSJ') nombrebanco = "San Juan";
+
         if(template=='ingreso'){
         	shadowRoot.appendChild(headerTemplate.content);
         }else if(template=='movimientos'){
         	 shadowRoot.appendChild(headerTemplateMov.content);
         }else{//homebanking
+        	var change = headerTemplateHB.innerHTML;
+        	change = change.replace("XXXX", nombrebanco);
+        	headerTemplateHB.innerHTML = change;
         	shadowRoot.appendChild(headerTemplateHB.content);
         }
 
